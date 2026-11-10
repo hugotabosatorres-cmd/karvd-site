@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["DLUPP9R8KR.com.hugotorres.karvd"],
+        "components": [
+          { "/": "/i/*", "comment": "invite links" }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found - karvd</title>
+<meta name="description" content="karvd invite and page-not-found page.">
+<link rel="icon" type="image/png" href="/assets/icon.png">
+<link rel="apple-touch-icon" href="/assets/icon.png">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap"><a class="wordmark" href="/index.html">karvd</a></div></header>
+<main><div class="wrap">
+
+<div id="invite" hidden>
+<h1>You&rsquo;ve been invited to karvd</h1>
+<p>A friend has invited you to join them on karvd, a training, nutrition and coaching app.</p>
+<p id="get-wrap" class="center" hidden><a id="get-btn" class="btn" href="#">Get karvd</a></p>
+<p id="private-note" hidden>karvd is in private testing; ask the person who invited you for the test link.</p>
+<p class="meta">Already have karvd? Open this link on your iPhone.</p>
+</div>
+<div id="missing" hidden>
+<h1>Page not found</h1>
+<p>We couldn&rsquo;t find that page.</p>
+<p><a href="/index.html">Go to the karvd home page</a></p>
+</div>
+<noscript><h1>Page not found</h1><p><a href="/index.html">Go to the karvd home page</a></p></noscript>
+<script>
+const GET_APP_URL = "";
+(function () {
+  var isInvite = location.pathname.indexOf("/i/") === 0;
+  document.getElementById(isInvite ? "invite" : "missing").hidden = false;
+  if (isInvite) {
+    if (GET_APP_URL) {
+      var b = document.getElementById("get-btn");
+      b.href = GET_APP_URL;
+      document.getElementById("get-wrap").hidden = false;
+    } else {
+      document.getElementById("private-note").hidden = false;
+    }
+  }
+})();
+</script>
+
+</div></main>
+<footer class="site"><div class="wrap">
+<nav aria-label="Footer">
+<a href="/privacy/index.html">Privacy</a>
+<a href="/terms/index.html">Terms</a>
+<a href="/community-guidelines/index.html">Community guidelines</a>
+<a href="/support/index.html">Support</a>
+</nav>
+<p>&copy; 2026 Hugo Tabosa Torres, trading as karvd</p>
+</div></footer>
+</body>
+</html>
